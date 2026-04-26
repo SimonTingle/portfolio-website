@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon Tingle - Portfolio</title>
+    <title>Simon Tingle | AWS Backend Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Simon Tingle</h1>
-        <nav>
+        <nav class="container">
+            <div class="logo">Simon Tingle</div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -17,30 +18,40 @@
         </nav>
     </header>
     
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Simon Tingle, a passionate developer with experience in AWS backend configuration. I love building open-source projects. This portfolio showcases my work and journey.</p>
+    <main class="container">
+        <section id="about" class="hero">
+            <h1>Building the Backbone of the Cloud</h1>
+            <p>Hi, I'm Simon. I specialize in <strong>AWS backend configuration</strong> and open-source contributions. I turn complex infrastructure into seamless, scalable solutions.</p>
         </section>
         
         <section id="projects">
-            <h2>Projects</h2>
-            <p>Projects will be added here as I complete them. Stay tuned!</p>
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <article class="card">
+                    <h3>Project Alpha</h3>
+                    <p>An automated AWS Lambda deployment pipeline built with Python and Terraform.</p>
+                    <a href="https://github.com/SimonTingle" class="btn">View Source</a>
+                </article>
+                <article class="card">
+                    <h3>S3 Data Cleaner</h3>
+                    <p>Open-source utility for managing lifecycle policies across multiple regions.</p>
+                    <a href="https://github.com/SimonTingle" class="btn">View Source</a>
+                </article>
+            </div>
         </section>
         
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch:</p>
-            <ul>
-                <li>Email: <a href="mailto:simon@simontingle.com">your.email@example.com</a></li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/SimonTingle">linkedin.com/in/yourprofile</a></li>
-                <li>GitHub: <a href="https://github.com/SimonTingle">github.com/SimonTingle</a></li>
-            </ul>
+            <h2>Get in Touch</h2>
+            <div class="contact-links">
+                <a href="mailto:simon@simontingle.com">Email</a>
+                <a href="https://linkedin.com/in/SimonTingle">LinkedIn</a>
+                <a href="https://github.com/SimonTingle">GitHub</a>
+            </div>
         </section>
     </main>
     
     <footer>
-        <p>&copy; 2023 Simon Tingle. All rights reserved.</p>
+        <p>&copy; 2026 Simon Tingle. All rights reserved.</p>
     </footer>
 </body>
 </html>
