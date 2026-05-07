@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Root HTML element with English language setting -->
+<head> <!-- Metadata and resource container -->
+  <meta charset="UTF-8" /> <!-- Enables UTF-8 character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes the layout responsive on mobile devices -->
+  <meta
+    name="description"
+    content="Portfolio website for Simon, full stack developer."
+  /> <!-- Search engine description for the website -->
+  <title>Simon | Full Stack Developer</title> <!-- Browser tab title -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Links the external CSS file -->
+</head>
+<body> <!-- Main visible content of the page -->
+  <header class="site-header"> <!-- Top section containing branding and navigation -->
+    <div class="container"> <!-- Wrapper used to center content and control width -->
+      <h1>Simon</h1> <!-- Main heading of the website -->
+      <p class="tagline">Full Stack Developer</p> <!-- Short subtitle under the heading -->
+
+      <nav aria-label="Main navigation"> <!-- Semantic navigation section -->
+        <ul class="nav-list"> <!-- Unordered list for navigation links -->
+          <li><a href="#about">About</a></li> <!-- Link to About section -->
+          <li><a href="#projects">Projects</a></li> <!-- Link to Projects section -->
+          <li><a href="#contact">Contact</a></li> <!-- Link to Contact section -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main> <!-- Main content area -->
+    <section id="about" class="hero-section"> <!-- About section -->
+      <div class="container hero-grid"> <!-- Grid container for layout -->
+        <article> <!-- Article containing introduction text -->
+          <h2>About Me</h2> <!-- Section heading -->
+          <p>
+            I build full stack applications with a focus on performance,
+            usability, and clean architecture.
+          </p> <!-- Introductory paragraph -->
+
+          <p>
+            My interests include Electron applications, backend systems,
+            Docker infrastructure, and modern web tooling.
+          </p> <!-- Additional background information -->
+        </article>
+
+        <aside class="profile-card"> <!-- Sidebar content for profile image -->
+          <img
+            src="assets/profile.jpg"
+            alt="Portrait of Simon"
+          /> <!-- Profile image with accessible alt text -->
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section"> <!-- Projects section -->
+      <div class="container"> <!-- Content wrapper -->
+        <h2>Projects</h2> <!-- Projects section heading -->
+
+        <div class="projects-grid"> <!-- Grid layout for project cards -->
+          <article class="project-card"> <!-- Single project card -->
+            <h3>Upcoming Project</h3> <!-- Project title -->
+            <p>
+              This section will be updated as new projects are completed.
+            </p> <!-- Placeholder project description -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section"> <!-- Contact section -->
+      <div class="container"> <!-- Wrapper for contact content -->
+        <h2>Contact</h2> <!-- Contact section heading -->
+
+        <p>
+          Email:
+          <a href="mailto:simon@example.com">
+            simon@example.com
+          </a>
+        </p> <!-- Clickable email link -->
+
+        <p>
+          GitHub:
+          <a
+            href="https://github.com/SimonTingle"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/SimonTingle
+          </a>
+        </p> <!-- External GitHub profile link -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"> <!-- Footer section -->
+    <div class="container"> <!-- Footer content wrapper -->
+      <p>&copy; 2026 Simon. All rights reserved.</p> <!-- Copyright text -->
+    </div>
+  </footer>
+</body>
+</html>
