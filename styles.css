@@ -1,0 +1,110 @@
+* { /* Universal selector targets every element on the page */
+  box-sizing: border-box; /* Includes padding and borders inside total width and height calculations */
+  margin: 0; /* Removes default outer spacing added by browsers */
+  padding: 0; /* Removes default inner spacing added by browsers */
+} /* Ends universal reset rule */
+
+body { /* Styles the main body element */
+  font-family: Arial, sans-serif; /* Sets the primary font stack */
+  line-height: 1.6; /* Increases vertical spacing between text lines for readability */
+  background-color: #111827; /* Applies dark background color to entire page */
+  color: #f9fafb; /* Sets default text color to light gray */
+} /* Ends body styling */
+
+img { /* Targets all image elements */
+  max-width: 100%; /* Prevents images from overflowing their containers */
+  display: block; /* Removes inline spacing below images */
+} /* Ends image styling */
+
+.container { /* Reusable wrapper class for page sections */
+  width: min(1100px, 90%); /* Uses the smaller value between 1100px and 90% viewport width */
+  margin: 0 auto; /* Centers container horizontally */
+} /* Ends container styling */
+
+.site-header { /* Styles the top header section */
+  background-color: #1f2937; /* Gives header a slightly lighter dark background */
+  padding: 2rem 0; /* Adds vertical spacing inside header */
+} /* Ends header styling */
+
+.tagline { /* Styles the subtitle under the main heading */
+  margin-top: 0.5rem; /* Creates spacing above tagline */
+  color: #d1d5db; /* Uses softer gray text color */
+} /* Ends tagline styling */
+
+.nav-list { /* Styles the navigation list container */
+  display: flex; /* Enables Flexbox layout */
+  gap: 1rem; /* Adds spacing between navigation items */
+  list-style: none; /* Removes bullet points from list */
+  margin-top: 1.5rem; /* Adds spacing above navigation */
+  flex-wrap: wrap; /* Allows items to move onto new lines if needed */
+} /* Ends nav-list styling */
+
+.nav-list a { /* Styles links inside navigation */
+  color: #f9fafb; /* Sets link color */
+  text-decoration: none; /* Removes default underline */
+} /* Ends nav link styling */
+
+.nav-list a:hover { /* Applies styles when user hovers over links */
+  text-decoration: underline; /* Adds underline effect on hover */
+} /* Ends hover styling */
+
+.hero-section,
+.projects-section,
+.contact-section { /* Targets all major page sections */
+  padding: 4rem 0; /* Adds vertical spacing inside each section */
+} /* Ends shared section spacing */
+
+.hero-grid { /* Creates layout for About section */
+  display: grid; /* Enables CSS Grid layout */
+  grid-template-columns: 2fr 1fr; /* Creates two columns with proportional widths */
+  gap: 2rem; /* Adds spacing between grid columns */
+  align-items: center; /* Aligns content vertically in the center */
+} /* Ends hero grid styling */
+
+.profile-card { /* Styles container around profile image */
+  border-radius: 12px; /* Rounds card corners */
+  overflow: hidden; /* Prevents image overflow outside rounded corners */
+} /* Ends profile card styling */
+
+.projects-grid { /* Creates responsive layout for projects */
+  display: grid; /* Enables Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatically creates responsive columns */
+  gap: 1.5rem; /* Adds spacing between project cards */
+  margin-top: 2rem; /* Adds spacing above project grid */
+} /* Ends projects grid styling */
+
+.project-card { /* Styles individual project cards */
+  background-color: #1f2937; /* Gives cards dark background */
+  padding: 1.5rem; /* Adds inner spacing */
+  border-radius: 10px; /* Rounds project card corners */
+} /* Ends project card styling */
+
+.contact-section a { /* Styles links in contact section */
+  color: #93c5fd; /* Gives contact links blue color */
+} /* Ends contact link styling */
+
+.site-footer { /* Styles footer section */
+  background-color: #1f2937; /* Matches footer background with header */
+  padding: 2rem 0; /* Adds vertical spacing inside footer */
+  text-align: center; /* Centers footer text horizontally */
+} /* Ends footer styling */
+
+h1,
+h2,
+h3 { /* Targets main heading elements */
+  margin-bottom: 1rem; /* Adds spacing below headings */
+} /* Ends heading spacing */
+
+p { /* Targets all paragraph elements */
+  margin-bottom: 1rem; /* Adds spacing below paragraphs */
+} /* Ends paragraph spacing */
+
+@media (max-width: 768px) { /* Media query activates on tablets and smaller screens */
+  .hero-grid { /* Targets About section grid */
+    grid-template-columns: 1fr; /* Changes layout to a single column */
+  } /* Ends mobile hero-grid styling */
+
+  .nav-list { /* Targets navigation list on smaller screens */
+    flex-direction: column; /* Stacks navigation items vertically */
+  } /* Ends mobile nav-list styling */
+} /* Ends responsive media query */
