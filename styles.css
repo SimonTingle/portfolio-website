@@ -99,6 +99,162 @@ p { /* Targets all paragraph elements */
   margin-bottom: 1rem; /* Adds spacing below paragraphs */
 } /* Ends paragraph spacing */
 
+/* =========================================================
+   CSS DEMONSTRATION SECTION
+========================================================= */
+
+.css-demo-section {
+  /* 
+    This section visually separates the educational CSS examples
+    from the rest of the portfolio content.
+
+    Extra spacing was added to improve readability and prevent
+    the examples from feeling crowded.
+
+    A separate background color was chosen to make the section
+    stand out as a dedicated learning/demo area.
+  */
+
+  background-color: #0f172a;
+  padding: 4rem 0;
+}
+
+/* =========================================================
+   SHARED ARTICLE STYLING
+========================================================= */
+
+.demo-article {
+  /* 
+    Shared styling keeps all demonstration cards visually consistent.
+
+    Using repeated card-style layouts improves readability and creates
+    a predictable visual structure for users.
+
+    Margin spacing separates each example clearly.
+  */
+
+  background-color: #1f2937;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   CSS BOX MODEL EXAMPLE
+========================================================= */
+
+.box-model-demo {
+  /* 
+    This example was intentionally designed to visually demonstrate
+    all four layers of the CSS Box Model:
+
+    CONTENT:
+    The text inside the box.
+
+    PADDING:
+    Space between the content and border.
+
+    BORDER:
+    Visible outline surrounding the padding/content.
+
+    MARGIN:
+    Space outside the element separating it from nearby elements.
+
+    Bright colors and large spacing values were intentionally chosen
+    so each layer becomes easy to identify visually during inspection
+    in browser developer tools.
+
+    This location was chosen because the portfolio already discusses
+    frontend and UI development skills, making it an ideal place to
+    demonstrate foundational CSS knowledge.
+  */
+
+  background-color: #2563eb;
+  padding: 40px;
+  border: 8px solid #facc15;
+  margin: 30px 0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* =========================================================
+   FLEXBOX EXAMPLE
+========================================================= */
+
+.flex-demo {
+  /* 
+    Flexbox was chosen here because the layout only needs to manage
+    items in a single direction, horizontally across the row.
+
+    Flexbox excels at:
+    - Aligning items
+    - Spacing content evenly
+    - Handling responsive row/column layouts
+    - Centering elements vertically and horizontally
+
+    justify-content distributes items evenly across the row.
+
+    gap creates consistent spacing between flex items without using
+    individual margins.
+
+    This example demonstrates a very common real-world use case:
+    displaying technology tags or navigation-style content.
+  */
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  background-color: #374151;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+/* =========================================================
+   CSS GRID EXAMPLE
+========================================================= */
+
+.grid-demo {
+  /* 
+    CSS Grid was chosen here because the layout requires control
+    over both rows and columns simultaneously.
+
+    Unlike Flexbox, which primarily works in one direction,
+    Grid is designed for full two-dimensional page layouts.
+
+    repeat(2, 1fr) creates:
+    - 2 equal-width columns
+    - Each column takes one fraction of available space
+
+    Grid is extremely useful for:
+    - Dashboards
+    - Portfolio galleries
+    - Card layouts
+    - Complex responsive interfaces
+
+    This example was intentionally placed after the Flexbox example
+    to help show the conceptual difference between one-dimensional
+    and two-dimensional layout systems.
+  */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.grid-item {
+  background-color: #4b5563;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) { /* Media query activates on tablets and smaller screens */
   .hero-grid { /* Targets About section grid */
     grid-template-columns: 1fr; /* Changes layout to a single column */
