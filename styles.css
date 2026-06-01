@@ -1,266 +1,279 @@
-* { /* Universal selector targets every element on the page */
-  box-sizing: border-box; /* Includes padding and borders inside total width and height calculations */
-  margin: 0; /* Removes default outer spacing added by browsers */
-  padding: 0; /* Removes default inner spacing added by browsers */
-} /* Ends universal reset rule */
+/* =========================
+   GLOBAL RESET
+========================= */
 
-body { /* Styles the main body element */
-  font-family: Arial, sans-serif; /* Sets the primary font stack */
-  line-height: 1.6; /* Increases vertical spacing between text lines for readability */
-  background-color: #111827; /* Applies dark background color to entire page */
-  color: #f9fafb; /* Sets default text color to light gray */
-} /* Ends body styling */
-
-img { /* Targets all image elements */
-  max-width: 100%; /* Prevents images from overflowing their containers */
-  display: block; /* Removes inline spacing below images */
-} /* Ends image styling */
-
-.container { /* Reusable wrapper class for page sections */
-  width: min(1100px, 90%); /* Uses the smaller value between 1100px and 90% viewport width */
-  margin: 0 auto; /* Centers container horizontally */
-} /* Ends container styling */
-
-.site-header { /* Styles the top header section */
-  background-color: #1f2937; /* Gives header a slightly lighter dark background */
-  padding: 2rem 0; /* Adds vertical spacing inside header */
-} /* Ends header styling */
-
-.tagline { /* Styles the subtitle under the main heading */
-  margin-top: 0.5rem; /* Creates spacing above tagline */
-  color: #d1d5db; /* Uses softer gray text color */
-} /* Ends tagline styling */
-
-.nav-list { /* Styles the navigation list container */
-  display: flex; /* Enables Flexbox layout */
-  gap: 1rem; /* Adds spacing between navigation items */
-  list-style: none; /* Removes bullet points from list */
-  margin-top: 1.5rem; /* Adds spacing above navigation */
-  flex-wrap: wrap; /* Allows items to move onto new lines if needed */
-} /* Ends nav-list styling */
-
-.nav-list a { /* Styles links inside navigation */
-  color: #f9fafb; /* Sets link color */
-  text-decoration: none; /* Removes default underline */
-} /* Ends nav link styling */
-
-.nav-list a:hover { /* Applies styles when user hovers over links */
-  text-decoration: underline; /* Adds underline effect on hover */
-} /* Ends hover styling */
-
-.hero-section,
-.projects-section,
-.contact-section { /* Targets all major page sections */
-  padding: 4rem 0; /* Adds vertical spacing inside each section */
-} /* Ends shared section spacing */
-
-.hero-grid { /* Creates layout for About section */
-  display: grid; /* Enables CSS Grid layout */
-  grid-template-columns: 2fr 1fr; /* Creates two columns with proportional widths */
-  gap: 2rem; /* Adds spacing between grid columns */
-  align-items: center; /* Aligns content vertically in the center */
-} /* Ends hero grid styling */
-
-.profile-card { /* Styles container around profile image */
-  border-radius: 12px; /* Rounds card corners */
-  overflow: hidden; /* Prevents image overflow outside rounded corners */
-} /* Ends profile card styling */
-
-.projects-grid { /* Creates responsive layout for projects */
-  display: grid; /* Enables Grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatically creates responsive columns */
-  gap: 1.5rem; /* Adds spacing between project cards */
-  margin-top: 2rem; /* Adds spacing above project grid */
-} /* Ends projects grid styling */
-
-.project-card { /* Styles individual project cards */
-  background-color: #1f2937; /* Gives cards dark background */
-  padding: 1.5rem; /* Adds inner spacing */
-  border-radius: 10px; /* Rounds project card corners */
-} /* Ends project card styling */
-
-.contact-section a { /* Styles links in contact section */
-  color: #93c5fd; /* Gives contact links blue color */
-} /* Ends contact link styling */
-
-.site-footer { /* Styles footer section */
-  background-color: #1f2937; /* Matches footer background with header */
-  padding: 2rem 0; /* Adds vertical spacing inside footer */
-  text-align: center; /* Centers footer text horizontally */
-} /* Ends footer styling */
-
-h1,
-h2,
-h3 { /* Targets main heading elements */
-  margin-bottom: 1rem; /* Adds spacing below headings */
-} /* Ends heading spacing */
-
-p { /* Targets all paragraph elements */
-  margin-bottom: 1rem; /* Adds spacing below paragraphs */
-} /* Ends paragraph spacing */
-
-/* =========================================================
-   CSS DEMONSTRATION SECTION
-========================================================= */
-
-.css-demo-section {
-  /* 
-    This section visually separates the educational CSS examples
-    from the rest of the portfolio content.
-
-    Extra spacing was added to improve readability and prevent
-    the examples from feeling crowded.
-
-    A separate background color was chosen to make the section
-    stand out as a dedicated learning/demo area.
-  */
-
-  background-color: #0f172a;
-  padding: 4rem 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* =========================================================
-   SHARED ARTICLE STYLING
-========================================================= */
+/* =========================
+   PAGE LAYOUT
+========================= */
 
-.demo-article {
-  /* 
-    Shared styling keeps all demonstration cards visually consistent.
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f4f4;
 
-    Using repeated card-style layouts improves readability and creates
-    a predictable visual structure for users.
+  min-height: 100vh;
 
-    Margin spacing separates each example clearly.
-  */
-
-  background-color: #1f2937;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-/* =========================================================
-   CSS BOX MODEL EXAMPLE
-========================================================= */
+/* =========================
+   REUSABLE CONTAINER
+========================= */
 
-.box-model-demo {
-  /* 
-    This example was intentionally designed to visually demonstrate
-    all four layers of the CSS Box Model:
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
 
-    CONTENT:
-    The text inside the box.
+/* =========================
+   HEADER
+========================= */
 
-    PADDING:
-    Space between the content and border.
-
-    BORDER:
-    Visible outline surrounding the padding/content.
-
-    MARGIN:
-    Space outside the element separating it from nearby elements.
-
-    Bright colors and large spacing values were intentionally chosen
-    so each layer becomes easy to identify visually during inspection
-    in browser developer tools.
-
-    This location was chosen because the portfolio already discusses
-    frontend and UI development skills, making it an ideal place to
-    demonstrate foundational CSS knowledge.
-  */
-
-  background-color: #2563eb;
-  padding: 40px;
-  border: 8px solid #facc15;
-  margin: 30px 0;
+.site-header {
+  background: #1f2937;
   color: white;
-  text-align: center;
+  padding: 2rem 0;
+}
+
+.site-header .container {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.tagline {
+  color: #d1d5db;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-list {
+  list-style: none;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* =========================================================
-   FLEXBOX EXAMPLE
-========================================================= */
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+  display: grid;
+  gap: 4rem;
+  padding: 3rem 0;
+}
+
+/* =========================
+   HERO / ABOUT SECTION
+========================= */
+
+.hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 2rem;
+
+  align-items: center;
+}
+
+.hero-section article,
+.profile-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.profile-card {
+  display: grid;
+  place-items: center;
+}
+
+.profile-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section .container {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-section a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   CSS DEMONSTRATION SECTION
+========================= */
+
+.css-demo-section .container {
+  display: grid;
+  gap: 2rem;
+}
+
+.demo-article {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+
+  display: grid;
+  gap: 1rem;
+}
+
+/* =========================
+   BOX MODEL DEMO
+========================= */
+
+.box-model-demo {
+  background: #60a5fa;
+
+  padding: 30px;
+  border: 8px solid #1e40af;
+  margin: 20px;
+
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* =========================
+   GRID REPLACING FLEXBOX
+========================= */
 
 .flex-demo {
-  /* 
-    Flexbox was chosen here because the layout only needs to manage
-    items in a single direction, horizontally across the row.
+  display: grid;
 
-    Flexbox excels at:
-    - Aligning items
-    - Spacing content evenly
-    - Handling responsive row/column layouts
-    - Centering elements vertically and horizontally
+  grid-template-columns:
+    repeat(3, 1fr);
 
-    justify-content distributes items evenly across the row.
-
-    gap creates consistent spacing between flex items without using
-    individual margins.
-
-    This example demonstrates a very common real-world use case:
-    displaying technology tags or navigation-style content.
-  */
-
-  display: flex;
-  justify-content: space-between;
   gap: 1rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
 }
 
 .flex-item {
-  background-color: #374151;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-}
-
-/* =========================================================
-   CSS GRID EXAMPLE
-========================================================= */
-
-.grid-demo {
-  /* 
-    CSS Grid was chosen here because the layout requires control
-    over both rows and columns simultaneously.
-
-    Unlike Flexbox, which primarily works in one direction,
-    Grid is designed for full two-dimensional page layouts.
-
-    repeat(2, 1fr) creates:
-    - 2 equal-width columns
-    - Each column takes one fraction of available space
-
-    Grid is extremely useful for:
-    - Dashboards
-    - Portfolio galleries
-    - Card layouts
-    - Complex responsive interfaces
-
-    This example was intentionally placed after the Flexbox example
-    to help show the conceptual difference between one-dimensional
-    and two-dimensional layout systems.
-  */
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.grid-item {
-  background-color: #4b5563;
-  padding: 2rem;
+  background: #10b981;
+  color: white;
+  padding: 1rem;
   text-align: center;
   border-radius: 8px;
 }
 
-@media (max-width: 768px) { /* Media query activates on tablets and smaller screens */
-  .hero-grid { /* Targets About section grid */
-    grid-template-columns: 1fr; /* Changes layout to a single column */
-  } /* Ends mobile hero-grid styling */
+/* =========================
+   GRID DEMO
+========================= */
 
-  .nav-list { /* Targets navigation list on smaller screens */
-    flex-direction: column; /* Stacks navigation items vertically */
-  } /* Ends mobile nav-list styling */
-} /* Ends responsive media query */
+.grid-demo {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 1rem;
+}
+
+.grid-item {
+  background: #f59e0b;
+  color: white;
+
+  padding: 2rem;
+
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  background: #111827;
+  color: white;
+  padding: 2rem 0;
+}
+
+.site-footer .container {
+  display: grid;
+  justify-items: center;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .nav-list {
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+
+  .flex-demo {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-demo {
+    grid-template-columns: 1fr;
+  }
+}

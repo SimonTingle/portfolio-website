@@ -1,293 +1,201 @@
-<!DOCTYPE html> <!-- Defines the document type as HTML5 so browsers render using modern standards -->
-<html lang="en"> <!-- Root HTML element, lang="en" improves accessibility and SEO by telling screen readers and search engines the page language -->
-<head> <!-- Contains metadata and external resources, separated from visible page content -->
-  <meta charset="UTF-8" /> <!-- Enables UTF-8 encoding so special characters display correctly -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes layout responsive by matching page width to device width -->
-  <meta
-    name="description"
-    content="Portfolio website for Simon, full stack developer."
-  /> <!-- Description used by search engines when displaying the page in results -->
-  <title>Simon | Full Stack Developer</title> <!-- Text shown in browser tab and search engine titles -->
-  <link rel="stylesheet" href="styles.css" /> <!-- Connects external CSS file to style the page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website for Simon, full stack developer." />
+  <title>Simon | Full Stack Developer</title>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body> <!-- Contains all visible page content displayed in the browser -->
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
 
   <header class="site-header">
-    <!-- 
-      Semantic <header> used because this is introductory content for the page.
-      It groups branding, identity, and navigation together.
-      Screen readers and search engines recognize this as the top banner area.
-    -->
 
     <div class="container">
-      <!-- 
-        Non-semantic <div> used intentionally for layout/styling only.
-        Since it has no meaningful content role, a semantic tag is unnecessary here.
-      -->
 
       <h1>Simon</h1>
-      <!-- 
-        <h1> is the primary heading of the entire page.
-        Important for accessibility, SEO, and logical document structure.
-      -->
-
       <p class="tagline">Full Stack Developer</p>
-      <!-- 
-        <p> used because this is supporting text, not another heading.
-      -->
 
       <nav aria-label="Main navigation">
-        <!-- 
-          Semantic <nav> used because this section contains navigation links.
-          Helps screen readers identify navigation regions quickly.
-          aria-label gives extra accessibility context.
-        -->
-
         <ul class="nav-list">
-          <!-- 
-            <ul> used because navigation links form a grouped list of related items.
-            This improves semantic structure and accessibility.
-          -->
-
           <li><a href="#about">About</a></li>
-          <!-- <li> represents one item inside the navigation list -->
-
           <li><a href="#projects">Projects</a></li>
-          <!-- Anchor links jump to page sections -->
-
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
     </div>
+
   </header>
 
+  <!-- =========================
+       MAIN
+  ========================== -->
+
   <main>
-    <!-- 
-      Semantic <main> used because this contains the central content of the page.
-      Screen readers can jump directly to this area.
-      Only one <main> should exist per page.
-    -->
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section id="about" class="hero-section">
-      <!-- 
-        Semantic <section> used because this is a standalone thematic grouping.
-        The section has its own heading and purpose.
-      -->
 
       <div class="container hero-grid">
-        <!-- 
-          Layout wrapper used only for styling and grid positioning.
-        -->
 
         <article>
-          <!-- 
-            Semantic <article> used because this content could stand alone independently.
-            The introduction/about content is meaningful on its own.
-          -->
 
           <h2>About Me</h2>
-          <!-- 
-            <h2> creates proper heading hierarchy under the main <h1>.
-          -->
 
           <p>
             I build full stack applications with a focus on performance,
             usability, and clean architecture.
           </p>
-          <!-- Paragraph containing introduction text -->
 
           <p>
-            My interests include Electron applications, backend systems,
+            My interests include Electron apps, backend systems,
             Docker infrastructure, and modern web tooling.
           </p>
-          <!-- Additional descriptive paragraph -->
+
         </article>
 
         <aside class="profile-card">
-          <!-- 
-            Semantic <aside> used because the image is supporting content,
-            not the primary focus of the section.
-            Asides are commonly used for supplementary information.
-          -->
-
-          <img
-            src="assets/index-profile.png"
-            alt="Portrait of Simon"
-          />
-          <!-- 
-            <img> displays the profile image.
-            alt text improves accessibility for screen readers and image loading failures.
-          -->
+          <img src="assets/index-profile.png" alt="Portrait of Simon" />
         </aside>
+
       </div>
+
     </section>
+
+    <!-- =========================
+         GRID DEMO (IMAGE GALLERY)
+    ========================== -->
+
     <section class="css-demo-section">
-  <!-- 
-    This section was intentionally added to demonstrate three important CSS layout concepts:
-    the CSS Box Model, CSS Flexbox, and CSS Grid.
-
-    I chose to place this section inside <main> because these examples are part of the
-    educational and portfolio-related content of the page, not secondary information.
-
-    The section is positioned after Projects because it naturally fits as a technical
-    showcase area where development skills and CSS knowledge can be demonstrated.
-
-    Keeping these demonstrations grouped together also improves organization and makes
-    the page structure easier for both users and developers to understand.
-
-    A semantic <section> element was chosen because this content represents a distinct,
-    themed grouping with its own heading and educational purpose.
-  -->
-
-  <div class="container">
-    <h2>CSS Layout Demonstrations</h2>
-
-    <!-- ========================= -->
-    <!-- CSS BOX MODEL EXAMPLE -->
-    <!-- ========================= -->
-
-    <article class="demo-article">
-      <!-- 
-        <article> was chosen because this example is self-contained educational content.
-
-        Each demonstration could theoretically stand on its own as an independent
-        explanation or tutorial example, which aligns well with the purpose of
-        semantic <article> elements.
-
-        This structure also improves accessibility and document organization.
-      -->
-
-      <h3>CSS Box Model Example</h3>
-
-      <div class="box-model-demo">
-        Box Model Example
-      </div>
-
-      <p>
-        This example demonstrates how margin, border, padding,
-        and content work together to form the CSS Box Model.
-      </p>
-    </article>
-
-    <!-- ========================= -->
-    <!-- FLEXBOX EXAMPLE -->
-    <!-- ========================= -->
-
-    <article class="demo-article">
-      <h3>Flexbox Example</h3>
-
-      <div class="flex-demo">
-        <div class="flex-item">HTML</div>
-        <div class="flex-item">CSS</div>
-        <div class="flex-item">JavaScript</div>
-      </div>
-
-      <p>
-        Flexbox is useful for aligning items in a single direction,
-        either horizontally or vertically.
-      </p>
-    </article>
-
-    <!-- ========================= -->
-    <!-- GRID EXAMPLE -->
-    <!-- ========================= -->
-
-    <article class="demo-article">
-      <h3>CSS Grid Example</h3>
-
-      <div class="grid-demo">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-      </div>
-
-      <p>
-        CSS Grid is ideal for two-dimensional layouts involving
-        rows and columns.
-      </p>
-    </article>
-  </div>
-</section>
-
-    <section id="projects" class="projects-section">
-      <!-- 
-        Separate <section> used because projects are a distinct content area
-        with their own heading and purpose.
-      -->
 
       <div class="container">
+
+        <h2>CSS Grid Example</h2>
+
+        <article class="demo-article">
+
+          <h3>Project Gallery (CSS Grid)</h3>
+
+          <!--
+            Responsive CSS Grid image layout.
+            Each card contains a real image + label.
+          -->
+
+          <div class="grid-demo">
+
+            <div class="grid-item">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                   alt="Laptop code workspace">
+              <p>Web App Dashboard</p>
+            </div>
+
+            <div class="grid-item">
+              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800"
+                   alt="Developer workspace with screens">
+              <p>Backend System</p>
+            </div>
+
+            <div class="grid-item">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800"
+                   alt="Mobile app design on screen">
+              <p>Mobile UI Project</p>
+            </div>
+
+            <div class="grid-item">
+              <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800"
+                   alt="Code editor on dark theme">
+              <p>Electron App</p>
+            </div>
+
+          </div>
+
+          <p>
+            CSS Grid is used here to automatically arrange project cards into rows and columns.
+            The layout adapts smoothly to different screen sizes without breaking structure.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects" class="projects-section">
+
+      <div class="container">
+
         <h2>Projects</h2>
 
         <div class="projects-grid">
-          <!-- 
-            Non-semantic div used for layout only.
-            CSS Grid controls positioning of project cards.
-          -->
 
           <article class="project-card">
-            <!-- 
-              <article> used because each project is self-contained content.
-              Future projects could independently exist or be reused elsewhere.
-            -->
-
             <h3>Upcoming Project</h3>
-
-            <p>
-              This section will be updated as new projects are completed.
-            </p>
+            <p>This section will be updated as new projects are completed.</p>
           </article>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
     <section id="contact" class="contact-section">
-      <!-- 
-        Contact information grouped into its own semantic section.
-      -->
 
       <div class="container">
+
         <h2>Contact</h2>
 
         <p>
           Email:
-          <a href="mailto:simon@example.com">
-            simon@example.com
-          </a>
+          <a href="mailto:simon@example.com">simon@example.com</a>
         </p>
-        <!-- 
-          mailto: link opens the user's default email application.
-        -->
 
         <p>
           GitHub:
-          <a
-            href="https://github.com/SimonTingle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/SimonTingle"
+             target="_blank"
+             rel="noopener noreferrer">
             github.com/SimonTingle
           </a>
         </p>
-        <!-- 
-          target="_blank" opens link in new tab.
-          rel="noopener noreferrer" improves security and performance for external links.
-        -->
+
       </div>
+
     </section>
+
   </main>
 
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer class="site-footer">
-    <!-- 
-      Semantic <footer> used because this is the closing content of the page.
-      Typically contains copyright, legal info, or secondary links.
-    -->
 
     <div class="container">
       <p>&copy; 2026 Simon. All rights reserved.</p>
     </div>
+
   </footer>
 
 </body>
+
 </html>
